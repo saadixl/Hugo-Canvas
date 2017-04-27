@@ -1,0 +1,11 @@
+{{partial "header.html" .}}
+<section>
+	<h1><a href="{{.RelPermalink}}">{{.Title}}</a></h1>
+	<h5>
+		{{dateFormat "January 2, 2006" .Date}} &middot;  {{range .Params.tags}}
+		<a href="/tags/{{. | urlize}}/">#{{.}}</a>
+		{{end}}
+	</h5>
+	<div>{{.Content}}</div>
+</section>
+{{partial "footer.html" .}}

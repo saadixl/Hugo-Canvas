@@ -1,0 +1,12 @@
+name = "Hugo Canvas"
+license = ""
+licenselink = ""
+description = ""
+homepage = ""
+tags = []
+features = []
+min_version = 0.01
+
+[author]
+name = "saadixl"
+homepage = "#"

@@ -1,0 +1,9 @@
+<aside>
+	<h2>Dynamic Partial</h2>
+	{{range where .Site.RegularPages "Section" "about"}}
+		<div>
+			<h3>{{.Params.heading}}</h3>
+			<p>{{.Params.tag}}</p>
+		</div>
+	{{end}}
+</aside>

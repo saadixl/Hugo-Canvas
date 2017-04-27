@@ -1,0 +1,25 @@
+{{partial "header.html" .}}
+<section>
+	<h1>Blog</h1>
+</section>
+
+<section>
+	{{range $i, $page := .Paginator.Pages}}
+		{{if gt $i 0}}<hr>{{end}}
+		<div>
+			<h2>
+				<a href="{{.RelPermalink}}">
+					<img src={{.Params.cover}} />
+					<br />
+					{{.Title}}
+				</a>
+			</h2>
+			<h5>{{dateFormat "January 2, 2006" .Date}} &middot;  {{range .Params.tags}}<a href="/tags/{{. | urlize}}/">#{{.}}</a> {{end}}</h5>
+			<div>{{.Summary}}</div>
+			<div><a href="{{.RelPermalink}}">Continue reading →</a></div>
+		</div>
+	{{end}}
+	{{template "_internal/pagination.html" .}}
+</section>
+
+{{partial "footer.html" .}}
